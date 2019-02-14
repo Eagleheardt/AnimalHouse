@@ -1,11 +1,11 @@
 
-public class Snake extends Animal{
+public class Snake extends Reptile{
 	
 	Snake(){
 		super();
 	}
 	
 	Snake(String aName){
-		super(aName, "hiss", "scoot", "Snake");
+		super(aName, "hiss", "scoot", "snake");
 	}
 }

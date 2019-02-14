@@ -8,31 +8,20 @@ public class Main {
 			a.introduceYourself();
 			a.move();
 			System.out.println("");
-		}
-				
+		}	
+	}
+	
+	public static void printReptile(ArrayList<Reptile> aList) {
+		for (Reptile r : aList) {
+			r.makeSound();
+			r.introduceYourself();
+			r.move();
+			r.bask();
+			System.out.println("");
+		}	
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-//		Crocodile croc = new Crocodile("Croc");
-//		Snake snak = new Snake("Snek");
-//		Horse hors = new Horse("Horse");
-//		
-//		croc.makeSound();
-//		croc.introduceYourself();
-//		croc.move();
-//		System.out.println("");
-//		
-//		snak.makeSound();
-//		snak.introduceYourself();
-//		snak.move();
-//		System.out.println("");
-//		
-//		hors.introduceYourself();
-//		hors.makeSound();
-//		hors.move();
-		
 		
 		ArrayList<Animal> animalList = new ArrayList<Animal>();
 		
@@ -40,6 +29,18 @@ public class Main {
 		animalList.add(new Snake("Snek"));
 		animalList.add(new Horse("Horse"));
 		
-		printAnimals(animalList);
+		ArrayList<Reptile> reptileList = new ArrayList<Reptile>();
+		reptileList.add(new Crocodile("Croc2"));
+		reptileList.add(new Snake("Snek2"));
+		
+		
+		// printAnimals(animalList);
+		// printReptile(reptileList);
+		
+		Human guy1 = new Human("Bob", new Horse("Zeno"));
+		guy1.introducePet();
+		
+		Human guy2 = new Human("Carly", new Snake("Slither"));
+		guy2.introducePet();
 	}
 }

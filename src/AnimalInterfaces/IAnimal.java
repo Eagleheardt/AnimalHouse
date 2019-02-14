@@ -1,6 +1,6 @@
 package AnimalInterfaces;
 
-public interface AnimalNoise {
+public interface IAnimal {
 
 	public void makeSound();
 

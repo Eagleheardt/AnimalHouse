@@ -6,6 +6,6 @@ public class Horse extends Animal{
 	}
 	
 	Horse(String aName){
-		super(aName, "neigh", "gallop", "Horse");
+		super(aName, "neigh", "gallop", "horse");
 	}
 }

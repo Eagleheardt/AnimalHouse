@@ -1,6 +1,6 @@
-import AnimalInterfaces.AnimalNoise;
+import AnimalInterfaces.IAnimal;
 
-abstract class Animal implements AnimalNoise{
+abstract class Animal implements IAnimal{
 	private String _name;
 	private String _type;
 	private String _sound;
@@ -23,30 +23,30 @@ abstract class Animal implements AnimalNoise{
 	}
 	
 	public void makeSound() {
-		System.out.println("A " + this._type + " goes " + this._sound);
+		System.out.println("A " + this._type + " goes " + this._sound + ".");
 	}
 
 	public void introduceYourself() {
 		String output = "";
-		output += "My name is " + this._name + "\nI make this noise: " + this._sound;
+		output += "My name is " + this._name + " the " + this._type +  ".\nI make this noise: " + this._sound + ".";
 		System.out.println(output);
 	}
 	
 	public String toString() {
 		String output = "";
-		output += "Type: " + this._type + "\nName: " + this._name;
+		output += "Type: " + this._type + "\nName: " + this._name + ".";
 		return output;
 	}
 	
 	public void move() {
-		System.out.println("This is how I move: " + this._movement);
+		System.out.println("This is how I move: " + this._movement + ".");
 	}
 	
 	Animal(){
 		this._name = "I have no name.";
 		this._sound = "Silent";
-		this._movement = "no movement";		
-		this._type = "no type";
+		this._movement = "No movement";		
+		this._type = "No type";
 	}
 	
 	Animal(String aName, String aSound, String movement, String aType){
